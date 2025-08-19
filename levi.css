@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f7f7f7;
+  color: #222;
+}
+
+header {
+  background: #fff;
+  text-align: center;
+  padding: 2rem 1rem 1rem 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+header h1 {
+  margin: 0.5rem 0 0 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  color: #888;
+  font-size: 1.2rem;
+  margin: 0.5rem 0 0 0;
+}
+
+.main-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.main-menu li {
+  display: inline-block;
+}
+
+.main-menu a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.main-menu a:hover {
+  background: #e0e0e0;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.gallery-item {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.13);
+}
+
+.gallery-item figcaption {
+  padding: 1rem;
+  font-size: 1.05rem;
+  color: #444;
+  text-align: center;
+  background: #fafafa;
+}
+
+.about {
+  max-width: 700px;
+  margin: 3rem auto 2rem auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 2rem;
+}
+
+.about h2 {
+  margin-top: 0;
+}
+
+footer {
+  text-align: center;
+  color: #aaa;
+  font-size: 0.95rem;
+  padding: 2rem 0 1rem 0;
+  background: none;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 2rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .about {
+    padding: 1rem;
+  }
+}
+
+/* Add to style.css */
+.lightbox {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.lightbox-content {
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: 8px;
+  box-shadow: 0 0 32px #000;
+}
+.lightbox .close {
+  position: absolute;
+  top: 32px;
+  right: 48px;
+  color: #fff;
+  font-size: 2.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 1001;
+}

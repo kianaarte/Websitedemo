@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Artist Portfolio</title>
+  <link rel="stylesheet" href="levi.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="main-menu">
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+    <h1>Kiana</h1>
+    <p class="subtitle">Painter & Illustrator</p>
+  </header>
+  <main>
+    <section id="gallery" class="gallery">
+      <figure class="gallery-item">
+        <img src="images/art1.jpg" alt="Artwork 1">
+        <figcaption>Artwork Title 1</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="images/art2.jpg" alt="Artwork 2">
+        <figcaption>Artwork Title 2</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="images/art3.jpg" alt="Artwork 3">
+        <figcaption>Artwork Title 3</figcaption>
+      </figure>
+      <!-- Add more <figure> blocks as needed -->
+    </section>
+    <section id="about" class="about">
+      <h2>About</h2>
+      <p>
+        hi there! I'm an artist who loves to create vibrant and expressive paintings. My work is inspired by nature, emotions, and the beauty of everyday life. I hope you enjoy exploring my portfolio.
+      </p>
+    </section>
+    <!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox" style="display:none;">
+  <span class="close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+</div>
+<script src="levi.js"></script>
+  </main>
+  <footer>
+    &copy; 2025 Kiana Kavianynejad. All rights reserved.
+  </footer>
+</body>
+</html>
