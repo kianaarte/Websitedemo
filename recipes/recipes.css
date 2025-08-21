@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f8fb;
+}
+
+header {
+  background: linear-gradient(90deg, #0b344b 10%, #8bdcff 100%);
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+/* ...existing code... */
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px; /* Adds space between items */
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.gallery-item {
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 180px;      /* Set a fixed width */
+  margin: 0;         /* Remove margin if using gap */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery-item img {
+  width: 100%;       /* Image fits the container */
+  object-fit: cover; /* Crop image to fit */
+  display: block;
+}
+
+/* ...existing code... */
+
+/* ...existing code... */
+
+.main-menu {
+  margin-top: 1rem;
+}
+
+.main-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.main-menu li {
+  display: inline;
+}
+
+.main-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.main-menu a:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+/* ...existing code... */
+/* ...existing code... */
+
+.main-menu li {
+  position: relative;      /* Add this */
+  display: inline-block;   /* Change from inline to inline-block */
+}
+
+/* ...existing code... */
+
+.sub-menu {
+  display: none;           /* Hidden by default */
+  position: absolute;
+  left: 0;
+  top: 2.5rem;
+  background: #0b344b;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  min-width: 180px;
+  z-index: 10;
+  flex-direction: column;
+  padding: 0.5rem 0;
+}
+
+.main-menu li:hover > .sub-menu,
+.main-menu li:focus-within > .sub-menu {
+  display: flex;           /* Show on hover or focus */
+}
+
+
+/* Hide sub-menu by default */
+.main-menu .sub-menu {
+  display: none;
+  position: absolute;
+  background: #248eda;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-top: 0.5rem;
+  padding: 0;
+}
+
+/* Show sub-menu on hover */
+.main-menu li:hover > .sub-menu {
+  display: block;
+}
+
+/* Style sub-menu links */
+.main-menu .sub-menu li a {
+  color: #fff;
+  padding: 12px 16px;
+  display: block;
+  border-radius: 0;
+  background: none;
+}
+
+.main-menu .sub-menu li a:hover {
+  background: #1876ba70;
+  min-width: 160px;
+  width: 100%;
+  box-sizing: border-box;
+
+}
