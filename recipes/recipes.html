@@ -9,7 +9,7 @@
 <body>
   <header>
     <h1>🎨 Painting Gallery</h1>
-        <nav class="main-menu">
+    <nav class="main-menu">
       <ul>
         <li><a href="../test1.html">Home</a></li>
         <li>
@@ -17,9 +17,9 @@
           <ul class="sub-menu">
             <li><a href="../paintings.html">Painting</a></li>
             <li><a href="../drawing.html">Drawing</a></li>
-            <li><a href="gallery.html#abstract">Digital Art</a></li>
-            <li><a href="gallery.html#classic">Character Design</a></li>
-            <li><a href="gallery.html#abstract">Food Recipes</a></li>
+            <li><a href="../gallery.html#abstract">Digital Art</a></li>
+            <li><a href="../gallery.html#classic">Character Design</a></li>
+            <li><a href="../recipes/recipes.html">Food Recipes</a></li>
           </ul>
         </li>
         <li><a href="../about.html">About</a></li>
@@ -28,16 +28,12 @@
     </nav>
   </header>
   <main>
-    <div class="gallery" id="gallery"></div>
-    <figure class="gallery-item">
-      <img src="images/Pasta_Florentina.png" alt="Pasta_Florentina">
-      <figcaption>Pasta Florentina Recipe, Digital painting</figcaption>
-      <img src="images/Dolmeh_Gojeh.jpg" alt="Dolmeh_Gojeh">
-      <figcaption>Dolmeh Gojeh Recipe, Digital painting</figcaption>
-      <img src="images/Dolmeh_Bademjan.jpg" alt="Dolmeh_Bademjan">
-      <figcaption>Dolmeh Bademjan Recipe, Digital painting</figcaption>
-    </figure>
+    <div class="gallery-table" id="gallery-table"></div>
   </main>
+  <div class="img-modal" id="img-modal">
+    <img id="modal-img" src="" alt="">
+    <span id="modal-caption"></span>
+  </div>
   <script src="recipes.js"></script>
 </body>
 </html>

@@ -9,7 +9,7 @@
 <body>
   <header>
     <h1>🎨 Painting Gallery</h1>
-        <nav class="main-menu">
+    <nav class="main-menu">
       <ul>
         <li><a href="test1.html">Home</a></li>
         <li>
@@ -19,7 +19,7 @@
             <li><a href="drawing.html">Drawing</a></li>
             <li><a href="gallery.html#abstract">Digital Art</a></li>
             <li><a href="gallery.html#classic">Character Design</a></li>
-            <li><a href="gallery.html#abstract">Food Recipes</a></li>
+            <li><a href="recipes/recipes.html">Food Recipes</a></li>
           </ul>
         </li>
         <li><a href="about.html">About</a></li>
@@ -29,24 +29,10 @@
   </header>
   <main>
     <div class="gallery" id="gallery"></div>
-    <figure class="gallery-item">
-      <img src="images/bees.jpg" alt="bees">
-      <figcaption>practice bees, colorpencil</figcaption>
-      <img src="images/carpet1.jpg" alt="carpet1">
-      <figcaption>Iranian carpet, oilcolor</figcaption>
-      <img src="images/carpet2.jpg" alt="carpet2">
-      <figcaption>Iranian carpet, oilcolor</figcaption>
-      <img src="images/lady with cat.jpg" alt="laady">
-      <figcaption>Study of a painting from Steve HANKS, colorpencil</figcaption>
-      <img src="images/cat.jpg" alt="laady">
-      <figcaption>Study of a painting from Lana Privitera, colorpencil</figcaption>
-      <img src="images/catinbox.jpg" alt="catinbox">
-      <figcaption>The Istanbul cat, colorpencil</figcaption>
-      <img src="images/watercolour.jpg" alt="watercolour">
-      <figcaption>Watercolor practice, watercolour</figcaption>
-      <img src="images/bahram.jpg" alt="bahram">
-      <figcaption>Portrait of Bahram Radan, Pastel</figcaption>
-    </figure>
+    <div class="img-modal" id="img-modal">
+      <img id="modal-img" src="" alt="">
+      <span id="modal-caption"></span>
+    </div>
   </main>
   <script src="paintings.js"></script>
 </body>

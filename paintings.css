@@ -18,12 +18,11 @@ header h1 {
   font-weight: 600;
   letter-spacing: 1px;
 }
-/* ...existing code... */
 
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px; /* Adds space between items */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
   padding: 2rem;
   max-width: 1200px;
   margin: auto;
@@ -35,22 +34,56 @@ header h1 {
   overflow: hidden;
   box-shadow: 0 6px 12px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 180px;      /* Set a fixed width */
-  margin: 0;         /* Remove margin if using gap */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .gallery-item img {
-  width: 100%;       /* Image fits the container */
-  object-fit: cover; /* Crop image to fit */
-  display: block;
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.2s;
+  border-radius: 12px;
 }
 
-/* ...existing code... */
+.gallery-item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
 
-/* ...existing code... */
+.gallery-item figcaption {
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Modal styles */
+.img-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.img-modal img {
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+
+.img-modal span {
+  color: #fff;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
 
 .main-menu {
   margin-top: 1rem;
@@ -66,7 +99,8 @@ header h1 {
 }
 
 .main-menu li {
-  display: inline;
+  position: relative;
+  display: inline-block;
 }
 
 .main-menu a {
@@ -83,18 +117,8 @@ header h1 {
   background: rgba(255,255,255,0.15);
 }
 
-/* ...existing code... */
-/* ...existing code... */
-
-.main-menu li {
-  position: relative;      /* Add this */
-  display: inline-block;   /* Change from inline to inline-block */
-}
-
-/* ...existing code... */
-
 .sub-menu {
-  display: none;           /* Hidden by default */
+  display: none;
   position: absolute;
   left: 0;
   top: 2.5rem;
@@ -109,28 +133,9 @@ header h1 {
 
 .main-menu li:hover > .sub-menu,
 .main-menu li:focus-within > .sub-menu {
-  display: flex;           /* Show on hover or focus */
+  display: flex;
 }
 
-
-/* Hide sub-menu by default */
-.main-menu .sub-menu {
-  display: none;
-  position: absolute;
-  background: #248eda;
-  min-width: 160px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  z-index: 1;
-  margin-top: 0.5rem;
-  padding: 0;
-}
-
-/* Show sub-menu on hover */
-.main-menu li:hover > .sub-menu {
-  display: block;
-}
-
-/* Style sub-menu links */
 .main-menu .sub-menu li a {
   color: #fff;
   padding: 12px 16px;
@@ -144,5 +149,4 @@ header h1 {
   min-width: 160px;
   width: 100%;
   box-sizing: border-box;
-
 }

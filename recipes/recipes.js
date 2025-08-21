@@ -1,49 +1,51 @@
+const images = [
+  {
+    url: "images/Pasta_Florentina.png",
+    caption: "Pasta Florentina Recipe, Digital painting"
+  },
+  {
+    url: "images/Dolmeh_Gojeh.jpg",
+    caption: "Dolmeh Gojeh Recipe, Digital painting"
+  },
+  {
+    url: "images/Dolmeh_Bademjan.jpg",
+    caption: "Dolmeh Bademjan Recipe, Digital painting"
+  }
+];
 
-function getCategoryFromHash() {
-  const hash = window.location.hash.replace('#', '');
-  // Default to 'modern' if no hash or unknown hash
-  return categories[hash] ? hash : 'modern';
-}
+const galleryTable = document.getElementById('gallery-table');
 
-function renderGallery(category) {
-  const gallery = document.getElementById('gallery');
-  gallery.innerHTML = '';
-  const items = categories[category] || [];
-  items.forEach(painting => {
-    const item = document.createElement('div');
-    item.className = 'gallery-item';
-
-    const img = document.createElement('img');
-    img.src = painting.url;
-    img.alt = painting.title;
-
-    item.appendChild(img);
-    gallery.appendChild(item);
-  });
-}
-
-// Initial render
-renderGallery(getCategoryFromHash());
-
-// Update gallery when hash changes
-window.addEventListener('hashchange', () => {
-  renderGallery(getCategoryFromHash());
-});
-
-const gallery = document.getElementById('gallery');
-
-paintings.forEach(painting => {
+images.forEach(imgObj => {
   const figure = document.createElement('figure');
   figure.className = 'gallery-item';
 
   const img = document.createElement('img');
-  img.src = painting.url;
-  img.alt = painting.title;
+  img.src = imgObj.url;
+  img.alt = imgObj.caption;
+  img.addEventListener('click', () => openModal(imgObj.url, imgObj.caption));
 
   const caption = document.createElement('figcaption');
-  caption.textContent = painting.title;
+  caption.textContent = imgObj.caption;
 
   figure.appendChild(img);
   figure.appendChild(caption);
-  gallery.appendChild(figure);
+  galleryTable.appendChild(figure);
+});
+
+const modal = document.getElementById('img-modal');
+const modalImg = document.getElementById('modal-img');
+const modalCaption = document.getElementById('modal-caption');
+
+function openModal(src, caption) {
+  modal.style.display = 'flex';
+  modalImg.src = src;
+  modalCaption.textContent = caption;
+}
+
+modal.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
 });
