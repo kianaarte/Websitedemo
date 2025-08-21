@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Painting Gallery</title>
+  <title>Gallery Menu</title>
   <link rel="stylesheet" href="gallery.css" />
 </head>
 <body>
@@ -11,9 +11,9 @@
     <h1>🎨 Painting Gallery</h1>
         <nav class="main-menu">
       <ul>
-        <li><a href="test1.html">Home</a></li>
+        <li><a href="home.html">Home</a></li>
         <li>
-          <a href="#">Gallery</a>
+          <a href="gallery.html">Gallery</a>
           <ul class="sub-menu">
             <li><a href="paintings.html">Painting</a></li>
             <li><a href="gallery.html#classic">Drawing</a></li>
@@ -29,6 +29,13 @@
   </header>
   <main>
     <div class="gallery" id="gallery"></div>
+    <div class="button-grid">
+      <a href="paintings.html" class="gallery-btn">Painting</a>
+      <a href="gallery.html#classic" class="gallery-btn">Drawing</a>
+      <a href="gallery.html#abstract" class="gallery-btn">Digital Art</a>
+      <a href="gallery.html#classic" class="gallery-btn">Character Design</a>
+      <a href="recipes/recipes.html" class="gallery-btn">Food Recipes</a>
+    </div>
   </main>
   <script src="gallery.js"></script>
 </body>

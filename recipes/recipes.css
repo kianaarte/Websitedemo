@@ -151,26 +151,23 @@ header h1 {
   box-sizing: border-box;
 }
 
-
 .sub-menu {
-  display: none;           /* Hidden by default */
+  display: none;
   position: absolute;
   left: 0;
-  top: 2.5rem;
+  top: 100%; /* aligns sub-menu directly below parent */
   background: #0b344b;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.12);
   min-width: 180px;
   z-index: 10;
-  flex-direction: column;
   padding: 0.5rem 0;
 }
 
 .main-menu li:hover > .sub-menu,
 .main-menu li:focus-within > .sub-menu {
-  display: flex;           /* Show on hover or focus */
+  display: block;
 }
-
 
 /* Hide sub-menu by default */
 .main-menu .sub-menu {
@@ -189,3 +186,19 @@ header h1 {
   display: block;
 }
 
+/* Style sub-menu links */
+.main-menu .sub-menu li a {
+  color: #fff;
+  padding: 12px 16px;
+  display: block;
+  border-radius: 0;
+  background: none;
+}
+
+.main-menu .sub-menu li a:hover {
+  background: #1876ba70;
+  min-width: 160px;
+  width: 100%;
+  box-sizing: border-box;
+
+}

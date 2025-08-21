@@ -1,20 +1,3 @@
-const categories = {
-  modern: [
-    { title: "Sunset in the Valley", url: "images/sunset.jpg" },
-    { title: "Forest Mist", url: "images/forest.jpg" },
-    { title: "Ocean Dreams", url: "images/ocean.jpg" },
-    { title: "Desert Mirage", url: "images/desert.jpg" }
-  ],
-  classic: [
-    { title: "Pencil Portrait", url: "images/drawing1.jpg" },
-    { title: "Still Life", url: "images/drawing2.jpg" }
-  ],
-  abstract: [
-    { title: "Digital Dream", url: "images/digital1.jpg" },
-    { title: "Color Splash", url: "images/digital2.jpg" }
-  ]
-  // Add more categories as needed
-};
 
 function getCategoryFromHash() {
   const hash = window.location.hash.replace('#', '');
