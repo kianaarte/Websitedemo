@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+  min-height: 100vh;
+}
+
+header {
+  background: linear-gradient(90deg, #0b344b 10%, #8bdcff 100%);
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.main-menu {
+  margin-top: 1rem;
+}
+
+.main-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.main-menu li {
+  display: inline;
+}
+
+.main-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.main-menu a:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+/* Contact Section Styling */
+.contact-section {
+  max-width: 500px;
+  margin: 3rem auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  padding: 2.5rem 2rem 2rem 2rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-section h2 {
+  text-align: center;
+  color: #0b344b;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.contact-form label {
+  display: block;
+  margin-top: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #0b344b;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #b3d8e6;
+  margin-bottom: 1.2rem;
+  font-size: 1.05rem;
+  box-sizing: border-box;
+  background: #eaf6fb;
+  transition: border-color 0.2s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #8bdcff;
+  outline: none;
+}
+
+.contact-form button {
+  background: linear-gradient(90deg, #0b344b 10%, #8bdcff 100%);
+  color: #fff;
+  border: none;
+  padding: 0.85rem 2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  display: block;
+  margin: 1.5rem auto 0 auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.contact-form button:hover {
+  background: #1876ba;
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+  .contact-section {
+    padding: 1.5rem 1rem;
+    margin: 2rem auto;
+  }
+  .main-menu ul {
+    gap: 1rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .contact-section {
+    padding: 1rem 0.5rem;
+    margin: 1rem auto;
+  }
+  header h1 {
+    font-size: 1.5rem;
+  }
+  .main-menu a {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+}
