@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+  min-height: 100vh;
+}
+
+header {
+  background: linear-gradient(90deg, #0b344b 10%, #8bdcff 100%);
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-gallery-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  padding: 2rem 2rem 1.5rem 2rem;
+  max-width: 340px;
+  margin: 3rem auto;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about-gallery-item:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+}
+
+.about-img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid #8bdcff;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 2px 12px rgba(139,220,255,0.25);
+}
+
+.about-caption {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #0b344b;
+  margin-top: 0.5rem;
+  letter-spacing: 1px;
+  text-align: center;
+}
+/* ...existing code... */
+
+.main-menu {
+  margin-top: 1rem;
+}
+
+.main-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.main-menu li {
+  display: inline;
+}
+
+.main-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.main-menu a:hover {
+  background: rgba(255,255,255,0.15);

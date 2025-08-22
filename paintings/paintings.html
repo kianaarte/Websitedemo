@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Painting Gallery</title>
+  <link rel="stylesheet" href="paintings.css" />
+</head>
+<body>
+  <header>
+    <h1>🎨 Painting Gallery</h1>
+    <nav class="main-menu">
+      <ul>
+        <li><a href="../home/home.html">Home</a></li>
+        <li>
+          <a href="#">Gallery</a>
+          <ul class="sub-menu">
+            <li><a href="paintings/paintings.html">Painting</a></li>
+            <li><a href="drawing/drawing.html">Drawing</a></li>
+            <li><a href="../gallery/gallery.html#abstract">Digital Art</a></li>
+            <li><a href="../gallery/gallery.html#classic">Character Design</a></li>
+            <li><a href="../recipes/recipes.html">Food Recipes</a></li>
+          </ul>
+        </li>
+        <li><a href="../about/about.html">About</a></li>
+        <li><a href="../contact/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="gallery" id="gallery"></div>
+    <div class="img-modal" id="img-modal">
+      <img id="modal-img" src="" alt="">
+      <span id="modal-caption"></span>
+    </div>
+  </main>
+  <script src="paintings.js"></script>
+</body>
+</html>
