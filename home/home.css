@@ -103,3 +103,32 @@ header h1 {
   box-sizing: border-box;
 
 }
+
+/* Adjust to mobile */
+
+@media (max-width: 800px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem;
+    gap: 16px;
+  }
+  .main-menu ul {
+    gap: 1rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    padding: 0.5rem;
+    gap: 10px;
+  }
+  header h1 {
+    font-size: 1.5rem;
+  }
+  .main-menu a {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+}
