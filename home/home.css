@@ -146,7 +146,6 @@ header h1 {
     font-size: 1rem;
   }
 }
-
 @media (max-width: 500px) {
   header {
     padding: 1rem 0.5rem;
@@ -156,38 +155,43 @@ header h1 {
     padding: 0.5rem 0.2rem;
   }
   .main-menu ul {
-    flex-direction: column;
+    flex-direction: row; /* Keep menu horizontal */
     gap: 0.5rem;
-    align-items: stretch;
+    align-items: center;
     padding: 0 0.5rem;
   }
   .main-menu li {
-    display: block;
-    width: 100%;
+    display: inline-block;
+    width: auto;
     text-align: center;
   }
   .main-menu a {
     font-size: 1rem;
     padding: 0.5rem 0.5rem;
     text-align: center;
-    display: block;
-    width: 100%;
+    display: inline-block;
+    width: auto;
   }
-  /* Sub-menu stays hidden by default, only opens on hover/focus */
   .sub-menu {
-    position: static;
-    min-width: 0;
-    box-shadow: none;
-    border-radius: 0;
-    padding: 0;
-    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    border-radius: 8px;
+    padding: 0.5rem 0;
+    background: #0b344b;
+    display: none; /* Always hidden by default */
+    left: 0;
+    top: 100%;
+    z-index: 10;
+    flex-direction: column;
   }
   .main-menu li:hover > .sub-menu,
   .main-menu li:focus-within > .sub-menu {
-    display: block;
+    display: flex; /* Only open on hover/focus */
   }
   .main-menu .sub-menu li a {
     padding: 10px 12px;
+    display: block;
   }
   .welcome {
     padding: 0.5rem;
