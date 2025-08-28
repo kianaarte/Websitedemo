@@ -104,6 +104,74 @@ header h1 {
 
 }
 
+/* ...existing code... */
+
+/* Responsive styles for mobile */
+@media (max-width: 800px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem;
+    gap: 16px;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+  .main-menu ul {
+    gap: 1rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    padding: 0.5rem;
+    gap: 10px;
+  }
+  header h1 {
+    font-size: 1.2rem;
+  }
+  .main-menu a {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+}
+
+/* Clean up sub-menu CSS */
+.sub-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: #0b344b;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  min-width: 180px;
+  z-index: 10;
+  padding: 0.5rem 0;
+  flex-direction: column;
+}
+
+.main-menu li:hover > .sub-menu,
+.main-menu li:focus-within > .sub-menu {
+  display: flex;
+}
+
+.main-menu .sub-menu li a {
+  color: #fff;
+  padding: 12px 16px;
+  display: block;
+  border-radius: 0;
+  background: none;
+}
+
+.main-menu .sub-menu li a:hover {
+  background: #1876ba70;
+  min-width: 160px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .site-footer {
   background: #0b344b;
   color: #fff;
