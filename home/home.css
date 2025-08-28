@@ -97,11 +97,6 @@ header h1 {
   padding: 0;
 }
 
-/* Show sub-menu on hover */
-.main-menu li:hover > .sub-menu {
-  display: block;
-}
-
 /* Style sub-menu links */
 .main-menu .sub-menu li a {
   color: #fff;
@@ -159,5 +154,10 @@ header h1 {
   .main-menu ul {
     gap: 1rem;
     font-size: 1rem;
+  }
+}
+@media (max-width: 500px) {
+  header h1 {
+    font-size: 1.2rem;
   }
 }

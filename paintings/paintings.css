@@ -129,11 +129,6 @@ header h1 {
   padding: 0.5rem 0;
 }
 
-.main-menu li:hover > .sub-menu,
-.main-menu li:focus-within > .sub-menu {
-  display: block;
-}
-
 /* Hide sub-menu by default */
 .main-menu .sub-menu {
   display: none;
@@ -209,5 +204,10 @@ header h1 {
   .main-menu ul {
     gap: 1rem;
     font-size: 1rem;
+  }
+}
+@media (max-width: 500px) {
+  header h1 {
+    font-size: 1.2rem;
   }
 }
