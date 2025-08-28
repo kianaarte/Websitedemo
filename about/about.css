@@ -111,3 +111,32 @@ header {
     padding: 0.5rem;
   }
 }
+
+.site-footer {
+  background: #0b344b;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 0 1rem 0;
+  margin-top: 3rem;
+  font-size: 1.1rem;
+  border-top: 2px solid #8bdcff;
+}
+
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-right: 1rem;
+  transition: color 0.2s;
+}
+
+.footer-link:hover {
+  color: #8bdcff;
+}
+
+.footer-icon {
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
