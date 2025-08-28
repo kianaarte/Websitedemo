@@ -18,7 +18,7 @@ header h1 {
   font-weight: 600;
   letter-spacing: 1px;
 }
-
+/* Add after header styles or before .gallery */
 .welcome {
   max-width: 700px;
   margin: 2rem auto 1rem auto;
@@ -62,31 +62,42 @@ header h1 {
 .main-menu a:hover {
   background: rgba(255,255,255,0.15);
 }
-
-/* Sub-menu styles */
 .sub-menu {
   display: none;
   position: absolute;
   left: 0;
-  top: 100%;
+  top: 100%; /* aligns sub-menu directly below parent */
   background: #0b344b;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.12);
   min-width: 180px;
   z-index: 10;
   padding: 0.5rem 0;
-  flex-direction: column;
 }
 
 .main-menu li:hover > .sub-menu,
 .main-menu li:focus-within > .sub-menu {
-  display: flex;
-}
-
-.main-menu .sub-menu li {
   display: block;
 }
 
+/* Hide sub-menu by default */
+.main-menu .sub-menu {
+  display: none;
+  position: absolute;
+  background: #248eda;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-top: 0.5rem;
+  padding: 0;
+}
+
+/* Show sub-menu on hover */
+.main-menu li:hover > .sub-menu {
+  display: block;
+}
+
+/* Style sub-menu links */
 .main-menu .sub-menu li a {
   color: #fff;
   padding: 12px 16px;
@@ -101,8 +112,6 @@ header h1 {
   width: 100%;
   box-sizing: border-box;
 }
-
-/* Footer styles */
 .site-footer {
   background: #0b344b;
   color: #fff;
@@ -130,76 +139,4 @@ header h1 {
   width: 24px;
   height: 24px;
   margin-right: 8px;
-}
-
-/* Responsive styles for mobile */
-@media (max-width: 800px) {
-  .welcome {
-    padding: 1rem;
-    font-size: 1.1rem;
-  }
-  header h1 {
-    font-size: 2rem;
-  }
-  .main-menu ul {
-    gap: 1rem;
-    font-size: 1rem;
-  }
-}
-@media (max-width: 500px) {
-  header {
-    padding: 1rem 0.5rem;
-  }
-  header h1 {
-    font-size: 1.2rem;
-    padding: 0.5rem 0.2rem;
-  }
-  .main-menu ul {
-    flex-direction: row; /* Keep menu horizontal */
-    gap: 0.5rem;
-    align-items: center;
-    padding: 0 0.5rem;
-  }
-  .main-menu li {
-    display: inline-block;
-    width: auto;
-    text-align: center;
-  }
-  .main-menu a {
-    font-size: 1rem;
-    padding: 0.5rem 0.5rem;
-    text-align: center;
-    display: inline-block;
-    width: auto;
-  }
-  .sub-menu {
-    position: absolute;
-    min-width: 160px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-    border-radius: 8px;
-    padding: 0.5rem 0;
-    background: #0b344b;
-    display: none; /* Always hidden by default */
-    left: 0;
-    top: 100%;
-    z-index: 10;
-    flex-direction: column;
-  }
-  .main-menu li:hover > .sub-menu,
-  .main-menu li:focus-within > .sub-menu {
-    display: flex; /* Only open on hover/focus */
-  }
-  .main-menu .sub-menu li a {
-    padding: 10px 12px;
-    display: block;
-  }
-  .welcome {
-    padding: 0.5rem;
-    font-size: 1rem;
-    margin: 1rem auto;
-  }
-  .site-footer {
-    font-size: 0.95rem;
-    padding: 0.7rem 0 0.3rem 0;
-  }
 }
