@@ -63,10 +63,29 @@ header h1 {
   background: rgba(255,255,255,0.15);
 }
 
+
+/* Hide sub-menu by default */
+.sub-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: #248eda;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-top: 0.5rem;
+  padding: 0;
+  flex-direction: column;
+}
+
+/* Show sub-menu only on hover or focus */
 .main-menu li:hover > .sub-menu,
 .main-menu li:focus-within > .sub-menu {
-  display: block;
+  display: flex;
 }
+
+
 
 /* Hide sub-menu by default */
 .main-menu .sub-menu {
