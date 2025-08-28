@@ -167,22 +167,6 @@ header h1 {
   box-sizing: border-box;
 }
 
-/* Responsive styles for mobile */
-@media (max-width: 800px) {
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 1rem;
-    gap: 16px;
-  }
-  header h1 {
-    font-size: 2rem;
-  }
-  .main-menu ul {
-    gap: 1rem;
-    font-size: 1rem;
-  }
-}
-
 .site-footer {
   background: #0b344b;
   color: #fff;
@@ -210,4 +194,20 @@ header h1 {
   width: 24px;
   height: 24px;
   margin-right: 8px;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 800px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem;
+    gap: 16px;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+  .main-menu ul {
+    gap: 1rem;
+    font-size: 1rem;
+  }
 }
