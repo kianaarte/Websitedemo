@@ -1,7 +1,8 @@
 const backgroundImages = [
   'images/carpet1.jpg',
   'images/carpet2.jpg',
-  'images/bees.jpg'
+  'images/bees.jpg',
+  'images/lily and fish.jpg',
   // Add more image paths as needed
 ];
 
@@ -13,4 +14,4 @@ function setBackground() {
 }
 
 setBackground();
-setInterval(setBackground, 4000); // Change every 4 seconds
+setInterval(setBackground, 2300); // Change every 2.3 seconds
