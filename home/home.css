@@ -62,27 +62,17 @@ header h1 {
 .main-menu a:hover {
   background: rgba(255,255,255,0.15);
 }
-
-
-/* Hide sub-menu by default */
 .sub-menu {
   display: none;
   position: absolute;
   left: 0;
-  top: 100%;
-  background: #248eda;
-  min-width: 160px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  z-index: 1;
-  margin-top: 0.5rem;
-  padding: 0;
-  flex-direction: column;
-}
-
-/* Show sub-menu only on hover or focus */
-.main-menu li:hover > .sub-menu,
-.main-menu li:focus-within > .sub-menu {
-  display: flex;
+  top: 100%; /* aligns sub-menu directly below parent */
+  background: #0b344b;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  min-width: 180px;
+  z-index: 10;
+  padding: 0.5rem 0;
 }
 
 /* Hide sub-menu by default */
@@ -95,6 +85,11 @@ header h1 {
   z-index: 1;
   margin-top: 0.5rem;
   padding: 0;
+}
+
+/* Show sub-menu on hover */
+.main-menu li:hover > .sub-menu {
+  display: block;
 }
 
 /* Style sub-menu links */
@@ -112,6 +107,7 @@ header h1 {
   width: 100%;
   box-sizing: border-box;
 }
+
 .site-footer {
   background: #0b344b;
   color: #fff;
@@ -163,7 +159,7 @@ header h1 {
     gap: 10px;
   }
   header h1 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   .main-menu ul {
     font-size: 1rem;
